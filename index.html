@@ -5,69 +5,27 @@
 
   <style>
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      transition: 0.3s;
-      background: #f4f6f9;
+      font-family: Arial;
+      margin: 40px;
+      background-color: #f5f6fa;
       color: #2c3e50;
     }
 
-    /* DARK MODE */
-    body.dark {
-      background: #1e1e1e;
-      color: white;
+    h1, h2 {
+      color: #2c3e50;
     }
 
-    .dark .section {
-      background: #2c2c2c;
-    }
-
-    /* NAVBAR */
-    .navbar {
-      background: #2c3e50;
-      color: white;
-      padding: 15px 40px;
-      display: flex;
-      justify-content: space-between;
-      position: sticky;
-      top: 0;
-    }
-
-    .navbar a {
-      color: white;
-      margin-left: 20px;
-      text-decoration: none;
-    }
-
-    /* HERO */
-    .hero {
-      padding: 80px 40px;
-      text-align: center;
-      background: linear-gradient(135deg, #2980b9, #6dd5fa);
-      color: white;
-    }
-
-    .typing {
-      font-weight: bold;
-      font-size: 20px;
-    }
-
-    /* SECTION */
     .section {
-      padding: 50px 40px;
-      max-width: 1000px;
-      margin: auto;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.6s ease;
       background: white;
+      padding: 25px;
+      margin-bottom: 25px;
       border-radius: 10px;
-      margin-bottom: 20px;
+      box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
     }
 
-    .section.show {
-      opacity: 1;
-      transform: translateY(0);
+    a {
+      color: #2980b9;
+      text-decoration: none;
     }
 
     /* PROJECT CARDS */
@@ -78,165 +36,161 @@
     }
 
     .project-card {
+      background: white;
       padding: 20px;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: 0.3s;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
     }
 
     .project-card:hover {
-      transform: translateY(-6px);
+      transform: translateY(-5px);
+    }
+
+    .project-card p {
+      font-size: 14px;
+      color: #555;
     }
 
     .project-card a {
       display: inline-block;
       margin-top: 10px;
-      background: #2980b9;
-      color: white;
       padding: 8px 12px;
-      border-radius: 6px;
-    }
-
-    /* BUTTON */
-    .btn {
       background: #2980b9;
       color: white;
-      padding: 10px 15px;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-
-    .toggle {
-      cursor: pointer;
-    }
-
-    .footer {
-      text-align: center;
-      padding: 20px;
-      background: #2c3e50;
-      color: white;
+      border-radius: 5px;
     }
   </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<div class="navbar">
-  <div><strong>Alvin Saju</strong></div>
-  <div>
-    <span class="toggle" onclick="toggleDark()">🌙</span>
-  </div>
-</div>
-
-<!-- HERO -->
-<div class="hero">
-  <h1>Hi, I'm Alvin 👋</h1>
-  <p class="typing" id="typing"></p>
-</div>
+<h1>Hi, I'm Alvin Saju 👋</h1>
+<p><strong>Data Analyst | Machine Learning | Python | SQL</strong></p>
+<p>Based in Ireland | Open to opportunities</p>
 
 <!-- ABOUT -->
 <div class="section">
-  <h2>About Me</h2>
-  <p>Data Analyst skilled in Python, SQL, and Machine Learning.</p>
+<h2>👨‍💻 About Me</h2>
+<p>
+Aspiring Data Analyst with strong experience in data analysis, machine learning, and building real-world end-to-end projects. 
+Skilled in transforming raw data into meaningful insights using Python, SQL, and visualization tools. 
+Experienced in developing ML models, API-based systems, and data-driven applications. 
+Passionate about solving business problems using data and continuously learning modern technologies like cloud and DevOps.
+</p>
 </div>
 
 <!-- PROJECTS -->
 <div class="section">
-  <h2>Projects</h2>
-  <div class="projects-container">
+<h2>🚀 Projects</h2>
 
-    <div class="project-card">
-      <h3>Customer Churn</h3>
-      <p>ML with SHAP explainability</p>
-      <a href="https://github.com/alvinsaju7479/customer-churn-ml">View</a>
-    </div>
+<div class="projects-container">
 
-    <div class="project-card">
-      <h3>Fraud Detection</h3>
-      <p>ML anomaly detection system</p>
-      <a href="https://github.com/alvinsaju7479/fraud-detection-system">View</a>
-    </div>
+<div class="project-card">
+<h3>📊 Python Data Analysis</h3>
+<p>Performed data cleaning, EDA, and visualization using Pandas and Matplotlib.</p>
+<a href="https://github.com/alvinsaju7479/python-data-analysis">View Project</a>
+</div>
 
-    <div class="project-card">
-      <h3>House Price</h3>
-      <p>Prediction with ML</p>
-      <a href="https://github.com/alvinsaju7479/house-price-prediction">View</a>
-    </div>
+<div class="project-card">
+<h3>🤖 Customer Churn Prediction</h3>
+<p>Built ML model with SHAP explainability and deployed using Streamlit.</p>
+<a href="https://github.com/alvinsaju7479/customer-churn-ml">View Project</a>
+</div>
 
-  </div>
+<div class="project-card">
+<h3>🏠 House Price Prediction</h3>
+<p>End-to-end ML pipeline with feature engineering and model evaluation.</p>
+<a href="https://github.com/alvinsaju7479/house-price-prediction">View Project</a>
+</div>
+
+<div class="project-card">
+<h3>💳 Fraud Detection System</h3>
+<p>Developed anomaly detection system using ML with FastAPI backend.</p>
+<a href="https://github.com/alvinsaju7479/fraud-detection-system">View Project</a>
+</div>
+
+<div class="project-card">
+<h3>📈 SQL Analytics</h3>
+<p>Performed advanced SQL queries for business insights and reporting.</p>
+<a href="https://github.com/alvinsaju7479/SQL-ANALYTICS">View Project</a>
+</div>
+
+<div class="project-card">
+<h3>🌌 NASA Data Explorer</h3>
+<p>Built interactive data explorer using APIs and JavaScript.</p>
+<a href="https://github.com/alvinsaju7479/nasa-data-explorer">View Project</a>
+</div>
+
+<div class="project-card">
+<h3>🧠 Hybrid Recommender System</h3>
+<p>Implemented collaborative and content-based filtering system.</p>
+<a href="https://github.com/alvinsaju7479/hybrid-recommender-system">View Project</a>
+</div>
+
+<div class="project-card">
+<h3>🏥 Healthcare Risk Prediction</h3>
+<p>Predicted health risks using machine learning techniques.</p>
+<a href="https://github.com/alvinsaju7479/healthcare-risk-prediction">View Project</a>
+</div>
+
+<div class="project-card">
+<h3>📄 Resume Analyzer API</h3>
+<p>Built API to analyze resumes using NLP techniques.</p>
+<a href="https://github.com/alvinsaju7479/resume-analyzer-api">View Project</a>
+</div>
+
+<div class="project-card">
+<h3>🧾 Analytics Engineering Platform</h3>
+<p>Developed platform for analytics workflows and data processing.</p>
+<a href="https://github.com/alvinsaju7479/analytics-engineering-platform">View Project</a>
+</div>
+
+</div>
+
 </div>
 
 <!-- SKILLS -->
 <div class="section">
-  <h2>Skills</h2>
-  <p>Python, Java, C#, SQL, React, Docker, Kubernetes</p>
+<h2>🛠 Skills</h2>
+
+<ul>
+<li><strong>Programming:</strong> Python, Java, C#, SQL</li>
+<li><strong>Data Analysis:</strong> Pandas, NumPy, Data Cleaning, EDA</li>
+<li><strong>Machine Learning:</strong> Regression, Classification, Feature Engineering</li>
+<li><strong>Visualization:</strong> Power BI, Matplotlib, Seaborn</li>
+<li><strong>Web Development:</strong> HTML, CSS, React.js</li>
+<li><strong>Backend:</strong> FastAPI, REST APIs</li>
+<li><strong>Cloud & DevOps:</strong> Docker, Kubernetes</li>
+<li><strong>Databases:</strong> MySQL, PostgreSQL</li>
+<li><strong>Tools:</strong> Git, GitHub, Excel</li>
+</ul>
+
 </div>
 
 <!-- GITHUB ACTIVITY -->
 <div class="section">
-  <h2>GitHub Activity</h2>
-  <img src="https://ghchart.rshah.org/alvinsaju7479" style="width:100%;">
+<h2>📊 GitHub Activity</h2>
+<img src="https://ghchart.rshah.org/409ba5/alvinsaju7479" style="width:100%;">
 </div>
+
+<!-- RESUME -->
 <div class="section">
-  <h2>GitHub Activity</h2>
-  <p>My coding activity over time:</p>
-  <img src="https://ghchart.rshah.org/409ba5/alvinsaju7479" style="width:100%;">
+<h2>📄 Resume</h2>
+<a href="resume.pdf" target="_blank">Download Resume</a>
 </div>
+
 <!-- CONTACT -->
 <div class="section">
-  <h2>Contact</h2>
-  <p>Email: alvinsaju7479@gmail.com</p>
-  <p><a href="https://www.linkedin.com/in/alvin-saju-4621b8216">LinkedIn</a></p>
+<h2>📫 Contact</h2>
+<p>Email: alvinsaju7479@gmail.com</p>
+<p>
+LinkedIn: 
+<a href="https://www.linkedin.com/in/alvin-saju-4621b8216" target="_blank">
+View Profile
+</a>
+</p>
 </div>
-
-<div class="footer">
-  © 2026 Alvin Saju
-</div>
-
-<!-- SCRIPT -->
-<script>
-/* DARK MODE */
-function toggleDark() {
-  document.body.classList.toggle("dark");
-}
-
-/* TYPING EFFECT */
-const text = ["Data Analyst", "Machine Learning Engineer", "Python Developer"];
-let i = 0, j = 0, current = "", isDeleting = false;
-
-function type() {
-  current = text[i];
-  if (isDeleting) {
-    document.getElementById("typing").innerHTML = current.substring(0, j--);
-  } else {
-    document.getElementById("typing").innerHTML = current.substring(0, j++);
-  }
-
-  if (!isDeleting && j === current.length) {
-    isDeleting = true;
-    setTimeout(type, 1000);
-  } else if (isDeleting && j === 0) {
-    isDeleting = false;
-    i = (i + 1) % text.length;
-    setTimeout(type, 300);
-  } else {
-    setTimeout(type, isDeleting ? 50 : 100);
-  }
-}
-type();
-
-/* SCROLL ANIMATION */
-const sections = document.querySelectorAll(".section");
-window.addEventListener("scroll", () => {
-  sections.forEach(sec => {
-    const top = sec.getBoundingClientRect().top;
-    if (top < window.innerHeight - 100) {
-      sec.classList.add("show");
-    }
-  });
-});
-</script>
 
 </body>
 </html>
