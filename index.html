@@ -7,8 +7,19 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
+      transition: 0.3s;
       background: #f4f6f9;
       color: #2c3e50;
+    }
+
+    /* DARK MODE */
+    body.dark {
+      background: #1e1e1e;
+      color: white;
+    }
+
+    .dark .section {
+      background: #2c2c2c;
     }
 
     /* NAVBAR */
@@ -26,7 +37,6 @@
       color: white;
       margin-left: 20px;
       text-decoration: none;
-      font-size: 14px;
     }
 
     /* HERO */
@@ -37,13 +47,9 @@
       color: white;
     }
 
-    .hero h1 {
-      font-size: 40px;
-      margin-bottom: 10px;
-    }
-
-    .hero p {
-      font-size: 18px;
+    .typing {
+      font-weight: bold;
+      font-size: 20px;
     }
 
     /* SECTION */
@@ -51,9 +57,20 @@
       padding: 50px 40px;
       max-width: 1000px;
       margin: auto;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease;
+      background: white;
+      border-radius: 10px;
+      margin-bottom: 20px;
     }
 
-    /* PROJECTS GRID */
+    .section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* PROJECT CARDS */
     .projects-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -61,11 +78,10 @@
     }
 
     .project-card {
-      background: white;
       padding: 20px;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: all 0.2s ease;
+      transition: 0.3s;
     }
 
     .project-card:hover {
@@ -81,29 +97,25 @@
       border-radius: 6px;
     }
 
-    /* SKILLS */
-    ul {
-      line-height: 1.8;
-    }
-
     /* BUTTON */
     .btn {
-      display: inline-block;
-      margin-top: 10px;
       background: #2980b9;
       color: white;
       padding: 10px 15px;
       border-radius: 6px;
+      cursor: pointer;
     }
 
-    /* FOOTER */
+    .toggle {
+      cursor: pointer;
+    }
+
     .footer {
       text-align: center;
       padding: 20px;
       background: #2c3e50;
       color: white;
     }
-
   </style>
 </head>
 
@@ -113,104 +125,115 @@
 <div class="navbar">
   <div><strong>Alvin Saju</strong></div>
   <div>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
+    <span class="toggle" onclick="toggleDark()">🌙</span>
   </div>
 </div>
 
 <!-- HERO -->
 <div class="hero">
   <h1>Hi, I'm Alvin 👋</h1>
-  <p>Data Analyst | Machine Learning | Python | SQL</p>
+  <p class="typing" id="typing"></p>
 </div>
 
 <!-- ABOUT -->
 <div class="section">
-  <h2>👨‍💻 About Me</h2>
-  <p>
-    Aspiring Data Analyst with experience in data analysis, machine learning, and building end-to-end data projects.
-    Skilled in transforming data into actionable insights.
-  </p>
+  <h2>About Me</h2>
+  <p>Data Analyst skilled in Python, SQL, and Machine Learning.</p>
 </div>
 
 <!-- PROJECTS -->
-<div class="section" id="projects">
-  <h2>🚀 Projects</h2>
-
+<div class="section">
+  <h2>Projects</h2>
   <div class="projects-container">
 
     <div class="project-card">
-      <h3>Customer Churn Prediction</h3>
-      <p>ML model with SHAP explainability and Streamlit app.</p>
+      <h3>Customer Churn</h3>
+      <p>ML with SHAP explainability</p>
       <a href="https://github.com/alvinsaju7479/customer-churn-ml">View</a>
     </div>
 
     <div class="project-card">
-      <h3>House Price Prediction</h3>
-      <p>End-to-end ML pipeline with feature engineering.</p>
-      <a href="https://github.com/alvinsaju7479/house-price-prediction">View</a>
-    </div>
-
-    <div class="project-card">
       <h3>Fraud Detection</h3>
-      <p>Anomaly detection system using ML.</p>
+      <p>ML anomaly detection system</p>
       <a href="https://github.com/alvinsaju7479/fraud-detection-system">View</a>
     </div>
 
     <div class="project-card">
-      <h3>SQL Analytics</h3>
-      <p>Advanced SQL queries for business insights.</p>
-      <a href="https://github.com/alvinsaju7479/SQL-ANALYTICS">View</a>
-    </div>
-
-    <div class="project-card">
-      <h3>NASA Data Explorer</h3>
-      <p>API-based interactive data exploration.</p>
-      <a href="https://github.com/alvinsaju7479/nasa-data-explorer">View</a>
-    </div>
-
-    <div class="project-card">
-      <h3>Hybrid Recommender</h3>
-      <p>Collaborative + content-based filtering system.</p>
-      <a href="https://github.com/alvinsaju7479/hybrid-recommender-system">View</a>
+      <h3>House Price</h3>
+      <p>Prediction with ML</p>
+      <a href="https://github.com/alvinsaju7479/house-price-prediction">View</a>
     </div>
 
   </div>
 </div>
 
 <!-- SKILLS -->
-<div class="section" id="skills">
-  <h2>🛠 Skills</h2>
-  <ul>
-    <li>Python, Java, C#, SQL</li>
-    <li>Pandas, NumPy, Scikit-learn</li>
-    <li>Machine Learning, EDA, Feature Engineering</li>
-    <li>Power BI, Excel, Data Visualization</li>
-    <li>React.js, HTML, CSS</li>
-    <li>Docker, Kubernetes</li>
-    <li>Git, GitHub</li>
-  </ul>
+<div class="section">
+  <h2>Skills</h2>
+  <p>Python, Java, C#, SQL, React, Docker, Kubernetes</p>
 </div>
 
-<!-- RESUME -->
+<!-- GITHUB STATS -->
 <div class="section">
-  <h2>📄 Resume</h2>
-  <a href="resume.pdf" target="_blank" class="btn">Download Resume</a>
+  <h2>GitHub Stats</h2>
+  <img src="https://github-readme-stats.vercel.app/api?username=alvinsaju7479&show_icons=true">
 </div>
 
 <!-- CONTACT -->
-<div class="section" id="contact">
-  <h2>📫 Contact</h2>
-  <p>
-    <a href="https://www.linkedin.com/in/alvin-saju-4621b8216" target="_blank">LinkedIn</a>
-  </p>
+<div class="section">
+  <h2>Contact</h2>
+  <p>Email: your@email.com</p>
+  <p>Phone: +353XXXXXXXXX</p>
+  <p><a href="https://www.linkedin.com/in/alvin-saju-4621b8216">LinkedIn</a></p>
 </div>
 
-<!-- FOOTER -->
 <div class="footer">
   © 2026 Alvin Saju
 </div>
+
+<!-- SCRIPT -->
+<script>
+/* DARK MODE */
+function toggleDark() {
+  document.body.classList.toggle("dark");
+}
+
+/* TYPING EFFECT */
+const text = ["Data Analyst", "Machine Learning Engineer", "Python Developer"];
+let i = 0, j = 0, current = "", isDeleting = false;
+
+function type() {
+  current = text[i];
+  if (isDeleting) {
+    document.getElementById("typing").innerHTML = current.substring(0, j--);
+  } else {
+    document.getElementById("typing").innerHTML = current.substring(0, j++);
+  }
+
+  if (!isDeleting && j === current.length) {
+    isDeleting = true;
+    setTimeout(type, 1000);
+  } else if (isDeleting && j === 0) {
+    isDeleting = false;
+    i = (i + 1) % text.length;
+    setTimeout(type, 300);
+  } else {
+    setTimeout(type, isDeleting ? 50 : 100);
+  }
+}
+type();
+
+/* SCROLL ANIMATION */
+const sections = document.querySelectorAll(".section");
+window.addEventListener("scroll", () => {
+  sections.forEach(sec => {
+    const top = sec.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      sec.classList.add("show");
+    }
+  });
+});
+</script>
 
 </body>
 </html>
