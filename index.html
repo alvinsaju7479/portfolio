@@ -5,176 +5,211 @@
 
   <style>
     body {
-      font-family: Arial;
-      margin: 40px;
-      background-color: #f5f6fa;
-    }
-
-    h1, h2 {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
       color: #2c3e50;
     }
 
-    .section {
-      background: white;
-      padding: 25px;
-      margin-bottom: 25px;
-      border-radius: 10px;
-      box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+    /* NAVBAR */
+    .navbar {
+      background: #2c3e50;
+      color: white;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
     }
 
-    a {
-      color: #2980b9;
+    .navbar a {
+      color: white;
+      margin-left: 20px;
       text-decoration: none;
+      font-size: 14px;
     }
-    /* PROJECT CARDS */
-.projects-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-}
 
-.project-card {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-}
-
-.project-card h3 {
-  margin-top: 0;
-}
-
-.project-card p {
-  font-size: 14px;
-  color: #555;
-}
-
-.project-card a {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 8px 12px;
-  background: #2980b9;
-  color: white;
-  border-radius: 5px;
-}
-    .project {
-      margin-bottom: 15px;
+    /* HERO */
+    .hero {
+      padding: 80px 40px;
+      text-align: center;
+      background: linear-gradient(135deg, #2980b9, #6dd5fa);
+      color: white;
     }
+
+    .hero h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 18px;
+    }
+
+    /* SECTION */
+    .section {
+      padding: 50px 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    /* PROJECTS GRID */
+    .projects-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: all 0.2s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .project-card a {
+      display: inline-block;
+      margin-top: 10px;
+      background: #2980b9;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 6px;
+    }
+
+    /* SKILLS */
+    ul {
+      line-height: 1.8;
+    }
+
+    /* BUTTON */
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      background: #2980b9;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 6px;
+    }
+
+    /* FOOTER */
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background: #2c3e50;
+      color: white;
+    }
+
   </style>
 </head>
 
 <body>
 
-<h1>Hi, I'm Alvin Saju 👋</h1>
-<p><strong>Data Analyst | Python | SQL | Machine Learning</strong></p>
-<p>Based in Ireland | Open to opportunities</p>
+<!-- NAVBAR -->
+<div class="navbar">
+  <div><strong>Alvin Saju</strong></div>
+  <div>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
 
+<!-- HERO -->
+<div class="hero">
+  <h1>Hi, I'm Alvin 👋</h1>
+  <p>Data Analyst | Machine Learning | Python | SQL</p>
+</div>
+
+<!-- ABOUT -->
 <div class="section">
-<h2>👨‍💻 About Me</h2>
-<p>
-Aspiring Data Analyst with hands-on experience in data analysis, machine learning, and building end-to-end data projects. 
-Skilled in transforming raw data into actionable insights using Python, SQL, and visualization tools.
-</p>
+  <h2>👨‍💻 About Me</h2>
+  <p>
+    Aspiring Data Analyst with experience in data analysis, machine learning, and building end-to-end data projects.
+    Skilled in transforming data into actionable insights.
+  </p>
 </div>
 
+<!-- PROJECTS -->
+<div class="section" id="projects">
+  <h2>🚀 Projects</h2>
+
+  <div class="projects-container">
+
+    <div class="project-card">
+      <h3>Customer Churn Prediction</h3>
+      <p>ML model with SHAP explainability and Streamlit app.</p>
+      <a href="https://github.com/alvinsaju7479/customer-churn-ml">View</a>
+    </div>
+
+    <div class="project-card">
+      <h3>House Price Prediction</h3>
+      <p>End-to-end ML pipeline with feature engineering.</p>
+      <a href="https://github.com/alvinsaju7479/house-price-prediction">View</a>
+    </div>
+
+    <div class="project-card">
+      <h3>Fraud Detection</h3>
+      <p>Anomaly detection system using ML.</p>
+      <a href="https://github.com/alvinsaju7479/fraud-detection-system">View</a>
+    </div>
+
+    <div class="project-card">
+      <h3>SQL Analytics</h3>
+      <p>Advanced SQL queries for business insights.</p>
+      <a href="https://github.com/alvinsaju7479/SQL-ANALYTICS">View</a>
+    </div>
+
+    <div class="project-card">
+      <h3>NASA Data Explorer</h3>
+      <p>API-based interactive data exploration.</p>
+      <a href="https://github.com/alvinsaju7479/nasa-data-explorer">View</a>
+    </div>
+
+    <div class="project-card">
+      <h3>Hybrid Recommender</h3>
+      <p>Collaborative + content-based filtering system.</p>
+      <a href="https://github.com/alvinsaju7479/hybrid-recommender-system">View</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- SKILLS -->
+<div class="section" id="skills">
+  <h2>🛠 Skills</h2>
+  <ul>
+    <li>Python, Java, C#, SQL</li>
+    <li>Pandas, NumPy, Scikit-learn</li>
+    <li>Machine Learning, EDA, Feature Engineering</li>
+    <li>Power BI, Excel, Data Visualization</li>
+    <li>React.js, HTML, CSS</li>
+    <li>Docker, Kubernetes</li>
+    <li>Git, GitHub</li>
+  </ul>
+</div>
+
+<!-- RESUME -->
 <div class="section">
-<h2>🚀 Projects</h2>
-
-<div class="section">
-<h2>🚀 Projects</h2>
-
-<div class="projects-container">
-
-<div class="project-card">
-<h3>📊 Python Data Analysis</h3>
-<p>Data cleaning, analysis, and visualization using Pandas and Matplotlib.</p>
-<a href="https://github.com/alvinsaju7479/python-data-analysis">View Project</a>
+  <h2>📄 Resume</h2>
+  <a href="resume.pdf" target="_blank" class="btn">Download Resume</a>
 </div>
 
-<div class="project-card">
-<h3>🤖 Customer Churn Prediction</h3>
-<p>ML model with SHAP explainability and Streamlit deployment.</p>
-<a href="https://github.com/alvinsaju7479/customer-churn-ml">View Project</a>
+<!-- CONTACT -->
+<div class="section" id="contact">
+  <h2>📫 Contact</h2>
+  <p>
+    <a href="https://www.linkedin.com/in/alvin-saju-4621b8216" target="_blank">LinkedIn</a>
+  </p>
 </div>
 
-<div class="project-card">
-<h3>🏠 House Price Prediction</h3>
-<p>End-to-end ML pipeline with feature engineering and model evaluation.</p>
-<a href="https://github.com/alvinsaju7479/house-price-prediction">View Project</a>
-</div>
-
-<div class="project-card">
-<h3>💳 Fraud Detection System</h3>
-<p>Anomaly detection system using ML and FastAPI backend.</p>
-<a href="https://github.com/alvinsaju7479/fraud-detection-system">View Project</a>
-</div>
-
-<div class="project-card">
-<h3>📈 SQL Analytics</h3>
-<p>Advanced SQL queries to extract business insights and trends.</p>
-<a href="https://github.com/alvinsaju7479/SQL-ANALYTICS">View Project</a>
-</div>
-
-<div class="project-card">
-<h3>🌌 NASA Data Explorer</h3>
-<p>Interactive data explorer using APIs and JavaScript.</p>
-<a href="https://github.com/alvinsaju7479/nasa-data-explorer">View Project</a>
-</div>
-
-<div class="project-card">
-<h3>🧠 Hybrid Recommender</h3>
-<p>Collaborative + content-based filtering system with API.</p>
-<a href="https://github.com/alvinsaju7479/hybrid-recommender-system">View Project</a>
-</div>
-
-</div>
-
-</div><div class="section">
-<div class="section">
-<h2>🛠 Skills</h2>
-
-<ul>
-<li><strong>Programming Languages:</strong> Python, Java, C#, SQL</li>
-
-<li><strong>Data Analysis:</strong> Pandas, NumPy, Data Cleaning, EDA, Data Visualization</li>
-
-<li><strong>Machine Learning:</strong> Regression, Classification, Model Evaluation, Feature Engineering</li>
-
-<li><strong>Data Visualization Tools:</strong> Power BI, Matplotlib, Seaborn</li>
-
-<li><strong>Web & Frontend:</strong> HTML, CSS, React.js</li>
-
-<li><strong>Backend & APIs:</strong> FastAPI, REST APIs</li>
-
-<li><strong>Cloud & DevOps:</strong> Docker, Kubernetes</li>
-
-<li><strong>Databases:</strong> MySQL, PostgreSQL</li>
-
-<li><strong>Tools & Platforms:</strong> Git, GitHub, Excel</li>
-</ul>
-
-</div>
-
-</div>
-
-<div class="section">
-<h2>📄 Resume</h2>
-<a href="resume.pdf" target="_blank">Download Resume</a>
-</div>
-
-<div class="section">
-<h2>📫 Contact</h2>
-<p>
-LinkedIn: 
-<a href="https://www.linkedin.com/in/alvin-saju-4621b8216" target="_blank">
-View Profile
-</a>
-</p>
+<!-- FOOTER -->
+<div class="footer">
+  © 2026 Alvin Saju
 </div>
 
 </body>
