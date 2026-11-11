@@ -1,3 +1,1022 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Alvin Saju | Technical Assistant | Software & Data Management</title>
+
+  <meta name="description" content="Alvin Saju - MSc Big Data Management and Analytics graduate with technical skills in Python, SQL, databases, software applications and data management.">
+
+  <meta name="author" content="Alvin Saju">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 35px 40px;
+      background-color: #f5f6fa;
+      color: #2c3e50;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1250px;
+      margin: auto;
+    }
+
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
+
+    h1 {
+      font-size: 38px;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      font-size: 25px;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      font-size: 18px;
+    }
+
+    a {
+      color: #2980b9;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* HEADER */
+
+    .hero {
+      margin-bottom: 25px;
+      padding: 15px 0;
+    }
+
+    .headline {
+      font-size: 18px;
+      font-weight: bold;
+      color: #34495e;
+    }
+
+    .location {
+      color: #526276;
+    }
+
+    .hero-description {
+      max-width: 850px;
+      font-size: 16px;
+    }
+
+    .hero-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .hero-links a {
+      display: inline-block;
+      padding: 9px 16px;
+      border: 1px solid #dce2e8;
+      border-radius: 7px;
+      background: white;
+      font-size: 14px;
+      transition: 0.2s;
+    }
+
+    .hero-links a:hover {
+      background: #2980b9;
+      color: white;
+      text-decoration: none;
+      border-color: #2980b9;
+    }
+
+    .hero-links .primary {
+      background: #2980b9;
+      color: white;
+      border-color: #2980b9;
+    }
+
+    /* SECTIONS */
+
+    .section {
+      background: white;
+      padding: 28px;
+      margin-bottom: 25px;
+      border-radius: 12px;
+      box-shadow: 0px 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .section-description {
+      color: #596579;
+      margin-top: -8px;
+      margin-bottom: 22px;
+    }
+
+    /* PROJECT CARDS */
+
+    .projects-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background: #ffffff;
+      padding: 21px;
+      border-radius: 12px;
+      box-shadow: 0px 3px 10px rgba(0,0,0,0.07);
+      border: 1px solid #edf0f3;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 7px 18px rgba(0,0,0,0.10);
+    }
+
+    .project-card h3 {
+      margin-top: 2px;
+      margin-bottom: 8px;
+    }
+
+    .project-card p {
+      font-size: 14px;
+      color: #555;
+      flex-grow: 1;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 10px;
+      margin-bottom: 12px;
+    }
+
+    .project-tags span {
+      background: #eef4f8;
+      color: #34566f;
+      padding: 4px 9px;
+      border-radius: 20px;
+      font-size: 11px;
+    }
+
+    .project-card a {
+      display: inline-block;
+      align-self: flex-start;
+      margin-top: 10px;
+      padding: 8px 14px;
+      background: #2980b9;
+      color: white;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    .project-card a:hover {
+      background: #216a99;
+      text-decoration: none;
+    }
+
+    /* SKILLS */
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .skill-group {
+      padding: 18px;
+      border: 1px solid #edf0f3;
+      border-radius: 10px;
+      background: #fafbfc;
+    }
+
+    .skill-group h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    .skill-group ul {
+      padding-left: 20px;
+      margin-bottom: 0;
+    }
+
+    .skill-group li {
+      margin-bottom: 7px;
+      font-size: 14px;
+    }
+
+    /* INTEREST SECTION */
+
+    .interest {
+      border-left: 5px solid #2980b9;
+      background: #ffffff;
+    }
+
+    /* EXPERIENCE */
+
+    .experience-item {
+      padding: 18px;
+      border-left: 3px solid #2980b9;
+      background: #fafbfc;
+      border-radius: 5px;
+    }
+
+    .experience-item h3 {
+      margin-top: 0;
+    }
+
+    /* CERTIFICATIONS */
+
+    .certification-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 18px;
+    }
+
+    .certification-card {
+      padding: 20px;
+      border: 1px solid #edf0f3;
+      border-radius: 10px;
+      background: #fafbfc;
+    }
+
+    .certification-card h3 {
+      margin-top: 0;
+    }
+
+    /* GITHUB */
+
+    .github-chart {
+      width: 100%;
+      display: block;
+      margin-top: 15px;
+    }
+
+    /* CONTACT */
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .contact-links a {
+      padding: 9px 16px;
+      background: #2980b9;
+      color: white;
+      border-radius: 6px;
+    }
+
+    .contact-links a:hover {
+      background: #216a99;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      color: #777;
+      padding: 20px;
+      font-size: 13px;
+    }
+
+    /* MOBILE RESPONSIVENESS */
+
+    @media (max-width: 768px) {
+      body {
+        padding: 18px 14px;
+      }
+
+      h1 {
+        font-size: 29px;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
+
+      .section {
+        padding: 20px;
+      }
+
+      .hero-links {
+        gap: 9px;
+      }
+
+      .projects-container,
+      .skills-grid,
+      .certification-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- HEADER -->
+
+  <header class="hero">
+
+    <p class="location">📍 Dublin, Ireland</p>
+
+    <h1>Hi, I'm Alvin Saju 👋</h1>
+
+    <p class="headline">
+      Technical Assistant | Software & Data Management |
+      Python | SQL
+    </p>
+
+    <p class="hero-description">
+      MSc Big Data Management & Analytics graduate with a
+      Bachelor's degree in Computer Science and Engineering.
+      Skilled in programming, database management, software
+      applications, data processing and technical problem-solving.
+    </p>
+
+    <div class="hero-links">
+
+      <a href="#projects">View Projects</a>
+
+      <a href="https://github.com/alvinsaju7479"
+         target="_blank" rel="noopener noreferrer">
+        GitHub
+      </a>
+
+      <a href="https://www.linkedin.com/in/alvin-saju-4621b8216"
+         target="_blank" rel="noopener noreferrer">
+        LinkedIn
+      </a>
+
+      <a href="resume.pdf" target="_blank"
+         rel="noopener noreferrer" class="primary">
+        Download Resume
+      </a>
+
+    </div>
+
+  </header>
+
+
+  <!-- ABOUT ME -->
+
+  <section class="section" id="about">
+
+    <h2>👨‍💻 About Me</h2>
+
+    <p>
+      I am an MSc graduate in Big Data Management & Analytics
+      with a Bachelor's degree in Computer Science and
+      Engineering. My academic background and technical
+      projects have provided me with a strong foundation
+      in programming, software applications, databases
+      and information management.
+    </p>
+
+    <p>
+      I have developed practical projects involving Python
+      applications, SQL databases, API integrations, data
+      processing and application development. I enjoy
+      investigating technical problems, working with
+      structured information and finding effective solutions.
+    </p>
+
+    <p>
+      I am particularly interested in technology-driven
+      environments where I can contribute to software
+      support, application administration, document
+      management and efficient information workflows.
+      I am also enthusiastic about learning new systems
+      and developing my technical expertise.
+    </p>
+
+  </section>
+
+
+  <!-- TECHNICAL SKILLS -->
+
+  <section class="section" id="skills">
+
+    <h2>🛠 Technical Skills</h2>
+
+    <p class="section-description">
+      Technical knowledge developed through academic
+      studies and practical projects.
+    </p>
+
+    <div class="skills-grid">
+
+      <div class="skill-group">
+
+        <h3>💻 Software & Technical Skills</h3>
+
+        <ul>
+          <li>Software Applications</li>
+          <li>Technical Problem-Solving</li>
+          <li>Troubleshooting Fundamentals</li>
+          <li>REST API Integration</li>
+          <li>Application Development</li>
+          <li>Technical Documentation</li>
+        </ul>
+
+      </div>
+
+
+      <div class="skill-group">
+
+        <h3>🗄 Database & Data Management</h3>
+
+        <ul>
+          <li>SQL</li>
+          <li>PostgreSQL</li>
+          <li>MySQL</li>
+          <li>Database Queries</li>
+          <li>Data Validation</li>
+          <li>ETL & Data Processing</li>
+        </ul>
+
+      </div>
+
+
+      <div class="skill-group">
+
+        <h3>⌨ Programming & Development</h3>
+
+        <ul>
+          <li>Python</li>
+          <li>Java</li>
+          <li>JavaScript</li>
+          <li>HTML & CSS</li>
+          <li>FastAPI</li>
+          <li>Git & GitHub</li>
+        </ul>
+
+      </div>
+
+
+      <div class="skill-group">
+
+        <h3>📊 Microsoft Office & Reporting</h3>
+
+        <ul>
+          <li>Microsoft Excel</li>
+          <li>Pivot Tables</li>
+          <li>VLOOKUP</li>
+          <li>Power BI</li>
+          <li>Tableau</li>
+          <li>Data Reporting</li>
+        </ul>
+
+      </div>
+
+
+      <div class="skill-group">
+
+        <h3>☁ Cloud & Data Technologies</h3>
+
+        <ul>
+          <li>Docker</li>
+          <li>Linux</li>
+          <li>Apache Kafka</li>
+          <li>Apache Spark</li>
+          <li>AWS Fundamentals</li>
+        </ul>
+
+      </div>
+
+
+      <div class="skill-group">
+
+        <h3>🤝 Professional Skills</h3>
+
+        <ul>
+          <li>Communication</li>
+          <li>Teamwork</li>
+          <li>Analytical Thinking</li>
+          <li>Attention to Detail</li>
+          <li>Problem-Solving</li>
+          <li>Continuous Learning</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PROJECTS -->
+
+  <section class="section" id="projects">
+
+    <h2>🚀 Featured Technical Projects</h2>
+
+    <p class="section-description">
+      Selected projects demonstrating software development,
+      database management, data processing and analytical skills.
+    </p>
+
+    <div class="projects-container">
+
+
+      <div class="project-card">
+
+        <h3>📊 Python Data Analysis</h3>
+
+        <p>
+          Performed data cleaning, exploratory data analysis
+          and visualisation using Python, Pandas and Matplotlib
+          to generate meaningful insights.
+        </p>
+
+        <div class="project-tags">
+          <span>Python</span>
+          <span>Pandas</span>
+          <span>Matplotlib</span>
+        </div>
+
+        <a href="https://github.com/alvinsaju7479/python-data-analysis"
+           target="_blank" rel="noopener noreferrer">
+          View Project
+        </a>
+
+      </div>
+
+
+      <div class="project-card">
+
+        <h3>📈 SQL Analytics</h3>
+
+        <p>
+          Developed advanced SQL queries and database
+          reporting workflows to analyse structured
+          information and support business insights.
+        </p>
+
+        <div class="project-tags">
+          <span>SQL</span>
+          <span>Database</span>
+          <span>Reporting</span>
+        </div>
+
+        <a href="https://github.com/alvinsaju7479/SQL-ANALYTICS"
+           target="_blank" rel="noopener noreferrer">
+          View Project
+        </a>
+
+      </div>
+
+
+      <div class="project-card">
+
+        <h3>💳 Fraud Detection System</h3>
+
+        <p>
+          Developed a fraud detection application using
+          machine learning, anomaly detection and a
+          FastAPI backend.
+        </p>
+
+        <div class="project-tags">
+          <span>Python</span>
+          <span>FastAPI</span>
+          <span>SHAP</span>
+        </div>
+
+        <a href="https://github.com/alvinsaju7479/fraud-detection-system"
+           target="_blank" rel="noopener noreferrer">
+          View Project
+        </a>
+
+      </div>
+
+
+      <div class="project-card">
+
+        <h3>🚦 Urban Traffic Prediction</h3>
+
+        <p>
+          Developed a smart-city traffic analytics project
+          using sensor data, machine learning and streaming
+          technologies to predict congestion patterns.
+        </p>
+
+        <div class="project-tags">
+          <span>Python</span>
+          <span>Kafka</span>
+          <span>Machine Learning</span>
+        </div>
+
+        <a href="https://github.com/alvinsaju7479/urban-traffic-congestion-prediction"
+           target="_blank" rel="noopener noreferrer">
+          View Project
+        </a>
+
+      </div>
+
+
+      <div class="project-card">
+
+        <h3>🤖 Customer Churn Prediction</h3>
+
+        <p>
+          Built a machine learning model with SHAP
+          explainability and an interactive Streamlit
+          application for predictions.
+        </p>
+
+        <div class="project-tags">
+          <span>Python</span>
+          <span>SHAP</span>
+          <span>Streamlit</span>
+        </div>
+
+        <a href="https://github.com/alvinsaju7479/customer-churn-ml"
+           target="_blank" rel="noopener noreferrer">
+          View Project
+        </a>
+
+      </div>
+
+
+      <div class="project-card">
+
+        <h3>🏠 House Price Prediction</h3>
+
+        <p>
+          Developed an end-to-end machine learning
+          pipeline involving data preparation, feature
+          engineering and model evaluation.
+        </p>
+
+        <div class="project-tags">
+          <span>Python</span>
+          <span>Regression</span>
+          <span>Machine Learning</span>
+        </div>
+
+        <a href="https://github.com/alvinsaju7479/house-price-prediction"
+           target="_blank" rel="noopener noreferrer">
+          View Project
+        </a>
+
+      </div>
+
+
+      <div class="project-card">
+
+        <h3>🌌 NASA Data Explorer</h3>
+
+        <p>
+          Built an interactive data exploration
+          application using external APIs and JavaScript.
+        </p>
+
+        <div class="project-tags">
+          <span>JavaScript</span>
+          <span>APIs</span>
+          <span>Data Exploration</span>
+        </div>
+
+        <a href="https://github.com/alvinsaju7479/nasa-data-explorer"
+           target="_blank" rel="noopener noreferrer">
+          View Project
+        </a>
+
+      </div>
+
+
+      <div class="project-card">
+
+        <h3>🧠 Hybrid Recommender System</h3>
+
+        <p>
+          Implemented a recommendation system combining
+          collaborative filtering and content-based
+          filtering techniques.
+        </p>
+
+        <div class="project-tags">
+          <span>Python</span>
+          <span>FastAPI</span>
+          <span>ML</span>
+        </div>
+
+        <a href="https://github.com/alvinsaju7479/hybrid-recommender-system"
+           target="_blank" rel="noopener noreferrer">
+          View Project
+        </a>
+
+      </div>
+
+
+      <div class="project-card">
+
+        <h3>🏥 Healthcare Risk Prediction</h3>
+
+        <p>
+          Developed a machine learning application
+          to analyse data and predict potential
+          healthcare risks.
+        </p>
+
+        <div class="project-tags">
+          <span>Python</span>
+          <span>Machine Learning</span>
+          <span>Data Analysis</span>
+        </div>
+
+        <a href="https://github.com/alvinsaju7479/healthcare-risk-prediction"
+           target="_blank" rel="noopener noreferrer">
+          View Project
+        </a>
+
+      </div>
+
+
+      <div class="project-card">
+
+        <h3>📄 Resume Analyzer API</h3>
+
+        <p>
+          Built a Python API application for analysing
+          resume content, extracting skills and
+          processing structured information.
+        </p>
+
+        <div class="project-tags">
+          <span>Python</span>
+          <span>FastAPI</span>
+          <span>NLP</span>
+        </div>
+
+        <a href="https://github.com/alvinsaju7479/resume-analyzer-api"
+           target="_blank" rel="noopener noreferrer">
+          View Project
+        </a>
+
+      </div>
+
+
+      <div class="project-card">
+
+        <h3>🧾 Analytics Engineering Platform</h3>
+
+        <p>
+          Developed an analytics workflow project
+          focused on structured data processing
+          and analytical operations.
+        </p>
+
+        <div class="project-tags">
+          <span>Python</span>
+          <span>SQL</span>
+          <span>Data Engineering</span>
+        </div>
+
+        <a href="https://github.com/alvinsaju7479/analytics-engineering-platform"
+           target="_blank" rel="noopener noreferrer">
+          View Project
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- EXPERIENCE -->
+
+  <section class="section" id="experience">
+
+    <h2>💼 Experience</h2>
+
+    <div class="experience-item">
+
+      <h3>Data Analytics Intern</h3>
+
+      <p><strong>September 2024 – December 2024</strong></p>
+
+      <p>
+        Power BI | Tableau | R | Excel
+      </p>
+
+      <ul>
+        <li>
+          Built interactive dashboards for business
+          reporting and KPI analysis.
+        </li>
+
+        <li>
+          Performed statistical analysis on customer
+          and product datasets.
+        </li>
+
+        <li>
+          Worked with data processing and reporting
+          workflows to support business insights.
+        </li>
+
+        <li>
+          Collaborated with technical teams on
+          data-driven applications.
+        </li>
+      </ul>
+
+    </div>
+
+  </section>
+
+
+  <!-- LEGAL TECHNOLOGY -->
+
+  <section class="section interest" id="legal-technology">
+
+    <h2>⚖️ Legal Technology & eDiscovery</h2>
+
+    <p>
+      I am interested in the intersection of technology
+      and legal services, particularly electronic discovery,
+      document management, digital information handling
+      and software solutions that support legal operations.
+    </p>
+
+    <p>
+      I am keen to develop practical expertise in
+      eDiscovery platforms such as RelativityOne and HighQ.
+      I look forward to applying my existing technical
+      knowledge in databases, software applications
+      and problem-solving while learning specialised
+      legal technology systems.
+    </p>
+
+  </section>
+
+
+  <!-- CERTIFICATIONS -->
+
+  <section class="section" id="certifications">
+
+    <h2>🏆 Certifications</h2>
+
+    <div class="certification-list">
+
+      <div class="certification-card">
+
+        <h3>HackerRank Certified Software Engineer</h3>
+
+        <p>
+          Demonstrates knowledge of problem-solving,
+          SQL and REST APIs.
+        </p>
+
+        <a href="https://www.hackerrank.com/certificates/679795b59ab5"
+           target="_blank" rel="noopener noreferrer">
+          View Certificate
+        </a>
+
+      </div>
+
+
+      <div class="certification-card">
+
+        <h3>HackerRank SQL (Advanced)</h3>
+
+        <p>
+          Advanced SQL concepts including queries,
+          window functions and database operations.
+        </p>
+
+        <a href="https://www.hackerrank.com/certificates/8319a2eca687"
+           target="_blank" rel="noopener noreferrer">
+          View Certificate
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- GITHUB ACTIVITY -->
+
+  <section class="section" id="github">
+
+    <h2>📊 GitHub Activity</h2>
+
+    <p>
+      Explore my development activity and technical projects.
+    </p>
+
+    <img
+      src="https://ghchart.rshah.org/409ba5/alvinsaju7479"
+      alt="Alvin Saju GitHub contribution activity"
+      class="github-chart"
+    >
+
+    <p>
+      <a href="https://github.com/alvinsaju7479"
+         target="_blank" rel="noopener noreferrer">
+        Explore GitHub Profile
+      </a>
+    </p>
+
+  </section>
+
+
+  <!-- RESUME -->
+
+  <section class="section" id="resume">
+
+    <h2>📄 Resume</h2>
+
+    <p>
+      Interested in learning more about my education,
+      technical skills and experience?
+    </p>
+
+    <a href="resume.pdf" target="_blank"
+       rel="noopener noreferrer">
+      Download Resume
+    </a>
+
+  </section>
+
+
+  <!-- CONTACT -->
+
+  <section class="section" id="contact">
+
+    <h2>📫 Contact</h2>
+
+    <p>
+      I am open to opportunities in technical support,
+      software applications, data management and
+      technology-related roles.
+    </p>
+
+    <p>
+      <strong>Email:</strong>
+      <a href="mailto:alvinsaju7479@gmail.com">
+        alvinsaju7479@gmail.com
+      </a>
+    </p>
+
+    <div class="contact-links">
+
+      <a href="mailto:alvinsaju7479@gmail.com">
+        Email Me
+      </a>
+
+      <a href="https://www.linkedin.com/in/alvin-saju-4621b8216"
+         target="_blank" rel="noopener noreferrer">
+        LinkedIn
+      </a>
+
+      <a href="https://github.com/alvinsaju7479"
+         target="_blank" rel="noopener noreferrer">
+        GitHub
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+    © 2026 Alvin Saju | Built with HTML & CSS
+  </footer>
+
+</div>
+
+</body>
+</html>
 <!DOCTYPE html>
 <html>
 <head>
